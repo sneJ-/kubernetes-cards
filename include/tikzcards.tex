@@ -18,7 +18,7 @@
 \def\shapeLeftStripShort{(\strippadding,\cardheight-\strippadding-1) rectangle (\strippadding+\stripwidth,\cardheight+0.2)}
 \def\shapeRightStripShort{(\cardwidth-\stripwidth-\strippadding,\cardheight-\strippadding-1) rectangle (\cardwidth-\strippadding,\cardheight+0.2)}
 \def\shapeTitleArea{(2*\strippadding+\stripwidth,\cardheight-\strippadding) rectangle (\cardwidth-2*\strippadding-\stripwidth,\cardheight-2*\stripwidth)}
-\def\shapeContentArea{(2*\strippadding+\stripwidth,0.5*\cardheight) rectangle (\cardwidth+0.2,-0.2)}
+\def\shapeContentArea{(2*\strippadding+\stripwidth,6.1) rectangle (\cardwidth+0.2,-0.2)}
 
 
 %   Stylings für die Elemente definieren
@@ -79,7 +79,7 @@
         %   be cut because the even odd rule is set.
         \clip[cardcorners] \shapeCard;
         % Fill shapeLeftStripLong and shapeLeftStripShort.
-        %   Since the even odd rule is set, only the card will be filled.
+        % Since the even odd rule is set, only the card will be filled.
         \fill[strip,#1] \shapeLeftStripLong node[rotate=90,above left=0.9mm,font=\normalsize] {
             \color{white}\uppercase{#2}
         };
@@ -94,6 +94,7 @@
 \newcommand{\cardtypeWorkloadG}{\cardtype{workloadbg}{Workload}{\hspace{-1mm}\LARGE\Mundus}}
 \newcommand{\cardtypeRbac}{\cardtype{rbacbg}{Role Based Access Control}{\hspace{-1mm}\LARGE$\boxdot$}}
 \newcommand{\cardtypeRbacG}{\cardtype{rbacbg}{Role Based Access Control}{\hspace{-1mm}\LARGE\Mundus}}
+\newcommand{\cardtypeRbacO}{\cardtype{rbacbg}{Role Based Access Control}{\hspace{-1mm}\LARGE\Hm}}
 \newcommand{\cardtypeConfig}{\cardtype{configbg}{Configuration}{\hspace{-1mm}\LARGE$\boxdot$}}
 \newcommand{\cardtypeConfigG}{\cardtype{configbg}{Configuration}{\hspace{-1mm}\LARGE\Mundus}}
 \newcommand{\cardtypeStorage}{\cardtype{storagebg}{Storage}{\hspace{-1mm}\LARGE$\boxdot$}}
@@ -108,7 +109,7 @@
     \fill[elementcorners,titlebg,opacity=.85] \shapeTitleArea;
     \node[text width=3.75cm] at (0.5*\cardwidth,\titley) {
         \begin{center}
-            \color{white}\uppercase{\normalsize #1}
+            \color{white}\normalsize #1
         \end{center}
     };
 }
@@ -117,14 +118,14 @@
 \newcommand{\cardcontent}[2]{
     \begin{scope}[even odd rule]
         \clip[cardcorners] \shapeCard;
-        \fill[elementcorners,contentbg] \shapeContentArea;
+        \fill[elementcorners,contentbg,opacity=.85] \shapeContentArea;
     \end{scope}
-    \node[below right, text width=(\cardwidth-2*\strippadding-\stripwidth-2*\textpadding-0.3)*1cm] at (2*\strippadding+\stripwidth+\textpadding,0.5*\cardheight-\textpadding) {
+    \node[below right, text width=(\cardwidth-2*\strippadding-\stripwidth-2*\textpadding-0.3)*1cm] at (2*\strippadding+\stripwidth+\textpadding,6) {
         \textit{\glqq\normalsize #1\grqq}
     };
-    \node[below right, text width=(\cardwidth-2*\strippadding-\stripwidth-2*\textpadding-0.3)*1cm] at (2*\strippadding+\stripwidth+\textpadding,3) {
+    \node[below right, text width=(\cardwidth-2*\strippadding-\stripwidth-2*\textpadding-0.3)*1cm] at (2*\strippadding+\stripwidth+\textpadding,5.1) {
         \vrule width \textwidth height 2pt \\[-2pt]
-        \vspace{0.2cm}
+        \vspace{0.1cm}
         {\scriptsize #2}
     };
 }
