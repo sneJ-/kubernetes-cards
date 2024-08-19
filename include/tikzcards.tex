@@ -94,7 +94,7 @@
 \newcommand{\cardtypeWorkloadG}{\cardtype{workloadbg}{Workload}{\hspace{-1mm}\LARGE\Mundus}}
 \newcommand{\cardtypeRbac}{\cardtype{rbacbg}{Role Based Access Control}{\hspace{-1mm}\LARGE$\boxdot$}}
 \newcommand{\cardtypeRbacG}{\cardtype{rbacbg}{Role Based Access Control}{\hspace{-1mm}\LARGE\Mundus}}
-\newcommand{\cardtypeRbacO}{\cardtype{rbacbg}{Role Based Access Control}{\hspace{-1mm}\LARGE\Hm}}
+\newcommand{\cardtypeRbacO}{\cardtype{rbacbg}{Role Based Access Control}{\hspace{-1mm}\Large\textpmhg{w}}}
 \newcommand{\cardtypeConfig}{\cardtype{configbg}{Configuration}{\hspace{-1mm}\LARGE$\boxdot$}}
 \newcommand{\cardtypeConfigG}{\cardtype{configbg}{Configuration}{\hspace{-1mm}\LARGE\Mundus}}
 \newcommand{\cardtypeStorage}{\cardtype{storagebg}{Storage}{\hspace{-1mm}\LARGE$\boxdot$}}
@@ -118,7 +118,7 @@
 \newcommand{\cardcontent}[2]{
     \begin{scope}[even odd rule]
         \clip[cardcorners] \shapeCard;
-        \fill[elementcorners,contentbg,opacity=.85] \shapeContentArea;
+        \fill[elementcorners,contentbg,opacity=.66] \shapeContentArea;
     \end{scope}
     \node[below right, text width=(\cardwidth-2*\strippadding-\stripwidth-2*\textpadding-0.3)*1cm] at (2*\strippadding+\stripwidth+\textpadding,6) {
         \textit{\glqq\normalsize #1\grqq}

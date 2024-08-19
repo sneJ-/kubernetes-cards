@@ -1,0 +1,95 @@
+1. Service: Connecting Pods, Wherever They Are.
+Image: A wide, tranquil ocean with small islands scattered across the water, each representing a Pod. The islands are connected by elegantly arched bridges made of wood and rope, with seagulls flying overhead. The water below is clear, showing vibrant marine life. The sky is slightly cloudy, with sun rays breaking through, illuminating the connections between the islands.
+
+2. Daemonset: One Pod Per Node, Always.
+Image: A serene scene at twilight with a series of small, rocky islands, each crowned by a tall, glowing lighthouse. Each lighthouse casts a steady beam of light, guiding invisible ships and ensuring no area is left in darkness. The sea is calm, reflecting the warm light from the lighthouses, and a few stars are starting to appear in the sky.
+
+3. Role: Scoped Permissions, Focused Control.
+Image: A close-up of an old, weathered sailor’s map spread out on a wooden table. The map shows a detailed section of a coastline, with specific areas circled and annotated. Compass roses, navigation lines, and old, ornate symbols are drawn on the map, signifying restricted areas and safe passage routes. The table also holds a brass compass and a spyglass.
+
+4. ClusterRole: Cluster-Wide Permissions, Global Control.
+Image: An expansive, bird’s-eye view of a vast ocean dotted with numerous islands, each different in size and shape. The ocean is crisscrossed with invisible lines and currents that connect all the islands together. A large ship sails from one island to another, navigating through the interconnected routes. The sky is wide and open, suggesting limitless control over the entire cluster.
+
+5. ConfigMap: Configuration at Your Fingertips.
+Image: Inside a cozy captain’s cabin at sea, a large wooden desk is covered with detailed maps, charts, and open logbooks. Quills and ink bottles are scattered around, and an oil lamp softly illuminates the scene. A rolled-up map lies next to a compass and a small chest of drawers filled with scrolls, symbolizing organized and accessible configuration.
+
+6. PersistentVolumeClaim: Claim Your Storage, Persist Your Data.
+Image: Deep under the ocean, a large, ancient treasure chest is securely anchored to the sea floor with thick chains. The chest is partially open, revealing gold coins, jewels, and ancient scrolls. Surrounding the chest are colorful corals and schools of fish, symbolizing the security and persistence of stored data. Sunlight filters down from the surface, casting a mystical glow on the scene.
+
+7. Node: The Backbone of Your Cluster.
+Image: A powerful and sturdy ship sails through a rough sea, its large sails billowing in the wind. The ship is robust, with reinforced hulls and masts, symbolizing the strength and reliability of the nodes. Crew members are visible, working efficiently to keep the ship steady. The dark clouds above and crashing waves around emphasize the ship’s role as the backbone of the fleet.
+
+8. Node Failure: A Node Goes Down - But the Cluster Stays Up!
+Image: A dramatic scene of a shipwreck on a rocky shore during a storm. The ship’s mast is broken, and the hull is cracked, but in the background, other ships continue to sail through the storm, undeterred. The sea is turbulent, with large waves crashing against the rocks, but the other ships remain on course, symbolizing resilience and continuity.
+
+9. Ingress: Your Gateway to the Cluster.
+Image: A grand harbor entrance with towering stone walls and a massive iron gate that opens to let ships into a calm, protected bay. The entrance is guarded by two majestic lighthouses on either side, their lights cutting through the evening fog. The water in the harbor is smooth, and ships are safely anchored within, representing secure and controlled access.
+
+10. Pod: The Smallest Deployable Unit.
+Image: A small, solitary lifeboat floats peacefully on a calm, open sea. The boat is well-built, with sturdy oars resting inside. The water around the boat is clear and still, reflecting the bright blue sky above. The simplicity and isolation of the boat symbolize the fundamental unit in Kubernetes.
+
+11. ServiceAccount: Identity for Your Pods.
+Image: A close-up of a wooden board on the deck of a ship, with a distinctive, worn leather badge lying on it. The badge has intricate carvings and a unique emblem, signifying a sailor’s identity. The background shows the sea and distant ships, emphasizing the importance of having a distinct identity within the cluster.
+
+12. CustomResourceDefinition: Extend Kubernetes, Your Way.
+Image: A bustling dockyard where a ship is being customized and upgraded. Carpenters and blacksmiths are working on different parts of the ship, adding new features like reinforced hulls and upgraded sails. The scene is busy and full of energy, with crates of materials and tools scattered around, representing the flexibility to extend Kubernetes according to specific needs.
+
+13. Secret: Keep It Safe, Keep It Secret.
+Image: A hidden, secluded cove on a remote island, with a large, ornate treasure chest buried under soft sand. The chest is locked with a heavy, intricate lock, and vines and foliage partially obscure it. The entrance to the cove is narrow and hidden by large rocks, emphasizing the secrecy and security of its contents.
+
+14. StorageClass: Define Your Storage Strategy.
+Image: A fleet of ships, each outfitted differently to handle various types of cargo. Some ships have large open decks for bulk goods, while others have secure, reinforced holds for valuable items. The ships are docked at a harbor, each with distinct labels indicating their storage capabilities, representing different storage strategies.
+
+15. Namespace: Organize and Isolate Your Resources.
+Image: An archipelago of distinct islands, each with its own unique landscape and separated by clear, natural borders. One island might have a dense forest, another might have sandy beaches, and another might have towering cliffs. The islands are clearly separated by calm, narrow channels of water, symbolizing organized and isolated resources within the cluster.
+
+16. Disclosed CVE: A Vulnerability Is Found - Patch or Perish!
+Image: A dramatic storm scene with a ship being tossed by waves, its hull showing cracks where water is beginning to seep in. Sailors are frantically working to patch the breach using hammers and planks, while others are bailing water. Lightning illuminates the scene, and the dark clouds above add to the sense of urgency.
+
+17. IngressController: Traffic Control at the Edge.
+Image: A naval command center situated on a cliff overlooking a busy port. From the command center, signals are being sent to ships entering the harbor. The scene shows various ships being directed to their appropriate docks by signal flags and light signals. The command center is bustling with activity, managing the flow of traffic efficiently.
+
+18. ReplicaSet: Keep Your Pods Running.
+Image: A formation of identical ships sailing in perfect unison across a calm sea. Each ship is a precise copy of the others, with identical sails, hulls, and crew. The ships are maintaining a steady course, with clear skies and a gentle breeze, symbolizing reliability and consistency.
+
+19. RoleBinding: Linking Roles to Users.
+Image: Two captains stand on the deck of a ship, shaking hands in agreement. Behind them, their respective crews are mingling and working together, indicating that roles have been successfully linked. The scene is peaceful, with the sea calm and the ship steady, representing the linking of roles to users.
+
+20. ClusterRoleBinding: Cluster-Wide Access Control.
+Image: A large, powerful flagship in the middle of a fleet, with flags raised to signal orders to all other ships in the cluster. The flagship’s captain is standing on the deck, overseeing the entire operation as smaller ships in the fleet follow the given commands. The open sea around them is clear, symbolizing wide-reaching control and access.
+
+21. Job: Run to Completion.
+Image: A ship laden with cargo sails towards a distant port at sunset. The ship is on a clear, direct course, and the destination is within sight. The sky is a warm orange, and the sea is calm, representing the focused and determined journey of the job to its completion.
+
+22. PersistentVolume: Provisioned Storage for Your Cluster.
+Image: A large, secure warehouse at a busy port, filled with crates and barrels stacked neatly inside. The warehouse is made of stone and wood, with strong doors and locks, symbolizing the secure and provisioned storage. Outside, the port is busy with activity, but the warehouse remains organized and controlled.
+
+23. NetworkPolicy: Control Traffic, Secure Your Cluster.
+Image: A naval blockade at sea, with several warships forming a line, preventing unauthorized ships from passing through. The sea around them is calm, but the presence of the warships is imposing and secure. The sky is clear, and the water is deep blue, symbolizing control and security within the network.
+
+24. Pod Restart: A Pod Crashes - Kubernetes Brings It Back!
+Image: A lifeboat overturned in the water, but as a wave comes in, the boat is righted again by the force of the water. The scene shows the lifeboat bobbing back to the surface, with oars floating nearby, symbolizing the automatic recovery of a Pod after a crash. The surrounding water is turbulent, but the sky is clearing, indicating resilience.
+
+25. Deployment: Manage and Scale Your Pods.
+Image: A bustling harbor with multiple ships being dispatched from docks. Some ships are leaving for open sea, while others are being loaded with cargo, ready to scale operations. The scene is dynamic, with cranes moving, sailors working, and ships of various sizes being managed and scaled up according to demand.
+
+26. Statefulset: Persistent Identity, Stable Storage.
+Image: A series of ships docked at a port, each with a distinct name and permanent mooring spot. The ships are well-maintained, with each one having a unique figurehead and identifying features. The docks are sturdy, and the ships are securely tied, symbolizing persistence and stable identity.
+
+27. HorizontalPodAutoScaler: Scale with Demand.
+Image: Ships at a dock, with more ships being called in as more cargo arrives. The scene shows cranes lifting crates onto ships, and additional ships arriving as needed. The sea is calm, and the sky is bright, indicating a responsive and adaptable system that scales smoothly with demand.
+
+28. Group: Organize Users, Simplify Access.
+Image: A group of sailors gathered around a captain on the deck of a ship, listening to instructions. The sailors are organized into teams, each ready for a specific task. The background shows the open sea, with other ships nearby, symbolizing the organization and simplification of access within the cluster.
+
+29. CronJob: Scheduled Tasks, Automated.
+Image: A clock tower at a busy harbor, its large clock face showing the time as it strikes an hour. Ships in the harbor begin to move as the clock rings, representing the start of scheduled tasks. The scene is orderly, with ships leaving the dock right on schedule, symbolizing the automation of tasks.
+
+30. EndpointSlice: Efficient Service Discovery.
+Image: A series of brightly colored buoys floating in the sea, marking a clear, safe path to a harbor. Each buoy is distinct and easily visible, guiding ships efficiently to their destination. The sea is calm, and the buoys gently bob with the waves, symbolizing efficient and organized service discovery.
+
+31. User: Access Control Starts Here.
+Image: A sailor standing at the gangplank of a ship, presenting a badge or papers to a guard before boarding. The guard is inspecting the credentials carefully, while other sailors wait their turn. The ship is ready to set sail, but access is strictly controlled, symbolizing the starting point of access control.
+
+32. CustomResource: Tailored to Your Needs.
+Image: A ship in a dry dock, being outfitted with unique, customized features. Workers are adding personalized touches, like intricate carvings on the hull, reinforced sails, and specialized equipment. The scene is vibrant with activity, and the ship is clearly tailored for a specific purpose, symbolizing the customization of resources.
