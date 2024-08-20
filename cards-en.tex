@@ -100,7 +100,7 @@
 %   \cardtitle{\vspace{-5mm}SEHR LANGER TITEL}
 
     \begin{tikzpicture}
-        \cardbackground{img/ing.jpeg}
+        \cardbackground{img/ing.png}
         \cardtypeNetwork
         \cardtitle{Ingress}
         \cardcontent{Your Gateway to the Cluster.}{An Ingress is an API object that manages external access to services within a cluster, typically HTTP or HTTPS. It provides a way to route traffic based on rules, such as URL paths, to the appropriate services. Ingress helps you expose multiple services under a single IP address, simplifying external access management.}
@@ -110,7 +110,7 @@
     \end{tikzpicture}
     \hspace{5mm}
     \begin{tikzpicture}
-        \cardbackground{img/pod.jpeg}
+        \cardbackground{img/pod.png}
 %       \carddebug
         \cardtypeWorkload
         \cardtitle{Pod}
@@ -120,7 +120,7 @@
     \end{tikzpicture}
     \hspace{5mm}
     \begin{tikzpicture}
-        \cardbackground{img/sa.jpeg}
+        \cardbackground{img/sa.png}
         \cardtypeRbac
         \cardtitle{ServiceAccount}
         \cardcontent{Identity for Your Pods.}{A ServiceAccount provides an identity for processes that run in a Pod, allowing them to interact with the Kubernetes API. It grants permissions and tokens that control what the Pod can do within the cluster. ServiceAccounts are essential for managing secure and controlled access for applications.}
@@ -129,7 +129,7 @@
     \end{tikzpicture}
     \hspace{5mm}
     \begin{tikzpicture}
-        \cardbackground{img/crd.jpeg}
+        \cardbackground{img/crd.png}
         \cardtypeMiscG
         \cardtitle{Custom\-Resource\-Definition}
         \cardcontent{Extend Kubernetes, Your Way.}{A CustomResourceDefinition (CRD) allows you to create custom resources that extend Kubernetes' capabilities beyond its built-in objects. CRDs enable you to define and manage application-specific configurations or behaviors. They are key to building and scaling custom solutions on top of Kubernetes.}
@@ -148,7 +148,7 @@
     \end{tikzpicture}
     \hspace{5mm}
     \begin{tikzpicture}
-        \cardbackground{img/sc.jpeg}
+        \cardbackground{img/sc.png}
         \cardtypeStorage
         \cardtitle{StorageClass}
         \cardcontent{Define Your Storage Strategy.}{A StorageClass provides a way to describe the "classes" of storage available in a Kubernetes cluster. It abstracts storage provisioning, allowing PersistentVolumeClaims to automatically request specific types of storage (e.g., SSDs, NFS). StorageClasses enable flexible and automated storage management.}
@@ -185,7 +185,7 @@
 %   \cardtitle{\vspace{-5mm}SEHR LANGER TITEL}
 
     \begin{tikzpicture}
-        \cardbackground{img/ingress-controller.jpeg}
+        \cardbackground{img/ingress-controller.png}
         \cardtypeNetwork
         \cardtitle{Ingress\-Controller}
         \cardcontent{Traffic Control at the Edge.}{An IngressController is a component that implements the rules defined by an Ingress resource. It processes incoming HTTP/HTTPS requests and routes them to the appropriate Services in the cluster. IngressControllers are essential for managing external traffic and ensuring it reaches the correct endpoints.}
@@ -195,7 +195,7 @@
     \end{tikzpicture}
     \hspace{5mm}
     \begin{tikzpicture}
-        \cardbackground{img/rs.jpeg}
+        \cardbackground{img/rs.png}
 %       \carddebug
         \cardtypeWorkload
         \cardtitle{ReplicaSet}
@@ -205,7 +205,7 @@
     \end{tikzpicture}
     \hspace{5mm}
     \begin{tikzpicture}
-        \cardbackground{img/rb.jpeg}
+        \cardbackground{img/rb.png}
         \cardtypeRbac
         \cardtitle{RoleBinding}
         \cardcontent{Linking Roles to Users.}{A RoleBinding grants specific permissions to a user, group, or ServiceAccount within a particular namespace by associating them with a Role. It’s how you apply the access rules defined in a Role to actual users or services. RoleBindings help enforce security and access controls in a namespace.}
@@ -214,7 +214,7 @@
     \end{tikzpicture}
     \hspace{5mm}
     \begin{tikzpicture}
-        \cardbackground{img/crb.jpeg}
+        \cardbackground{img/crb.png}
         \cardtypeRbacG
         \cardtitle{ClusterRole\-Binding}
         \cardcontent{Cluster-Wide Access Control.}{A ClusterRoleBinding grants cluster-wide permissions to a user, group, or ServiceAccount by associating them with a ClusterRole. It allows you to apply access rules across all namespaces in the cluster. ClusterRoleBindings are essential for managing security and permissions on a global scale.}
@@ -224,7 +224,7 @@
 
     \vspace{5mm}
     \begin{tikzpicture}
-        \cardbackground{img/job.jpeg}
+        \cardbackground{img/job.png}
         \cardtypeWorkload
         \cardtitle{Job}
         \cardcontent{Run to Completion.}{A Job creates one or more Pods that run to completion, ensuring that a specific task is executed a defined number of times. Once the Pods complete their task, the Job is considered finished. Jobs are ideal for batch processing or tasks that need to run once or a few times.}
@@ -233,7 +233,7 @@
     \end{tikzpicture}
     \hspace{5mm}
     \begin{tikzpicture}
-        \cardbackground{img/pv.jpeg}
+        \cardbackground{img/pv.png}
         \cardtypeStorageG
         \cardtitle{Persistent\-Volume}
         \cardcontent{Provisioned Storage for Your Cluster.}{A PersistentVolume (PV) is a piece of storage in the cluster that has been provisioned by an administrator or dynamically by a StorageClass. It is used by PersistentVolumeClaims to persist data beyond the life of individual Pods. PVs provide durable storage that remains available even when Pods are deleted.}
@@ -242,7 +242,7 @@
     \end{tikzpicture}
     \hspace{5mm}
     \begin{tikzpicture}
-        \cardbackground{img/netpol.jpeg}
+        \cardbackground{img/netpol.png}
         \cardtypeNetwork
         \cardtitle{NetworkPolicy}
         \cardcontent{Control Traffic, Secure Your Cluster.}{A NetworkPolicy is a set of rules that define how Pods can communicate with each other and with external endpoints. It controls traffic at the network level, specifying which connections are allowed or denied. NetworkPolicies are vital for securing communication between services and managing network segmentation.}
@@ -251,7 +251,7 @@
     \end{tikzpicture}
     \hspace{5mm}
     \begin{tikzpicture}
-        \cardbackground{img/pod-restart.jpeg}
+        \cardbackground{img/pod-restart.png}
         \cardtypeEvent
         \cardtitle{Pod Restart}
         \cardcontent{A Pod Crashes - Kubernetes Brings It Back!}{A Pod Restart event occurs when a Pod crashes or is terminated unexpectedly, triggering Kubernetes to automatically restart it. This self-healing mechanism helps maintain application uptime and ensures that services remain available despite occasional failures. It’s a reminder of Kubernetes' robustness in handling disruptions.}
