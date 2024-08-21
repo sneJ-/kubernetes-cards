@@ -48,7 +48,8 @@
     cardimage/.style={
         path picture={
             \node[below=-1.5mm] at (0.5*\cardwidth,\cardheight) {
-                \includegraphics[width=\imagewidth cm]{#1}
+                %\includegraphics[width=\imagewidth cm]{#1}
+				\includegraphics[width=\imagewidth cm, height = 4.09cm, keepaspectratio, clip, trim=0cm 5.75cm 0cm 5.75cm]{#1}
             };
         }
     },
@@ -118,7 +119,7 @@
 \newcommand{\cardcontent}[2]{
     \begin{scope}[even odd rule]
         \clip[cardcorners] \shapeCard;
-        \fill[elementcorners,contentbg,opacity=.66] \shapeContentArea;
+        \fill[elementcorners,contentbg,opacity=.60] \shapeContentArea;
     \end{scope}
     \node[below right, text width=(\cardwidth-2*\strippadding-\stripwidth-2*\textpadding-0.3)*1cm] at (2*\strippadding+\stripwidth+\textpadding,6) {
         \textit{\glqq\normalsize #1\grqq}
