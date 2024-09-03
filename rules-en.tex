@@ -41,7 +41,14 @@ The game is divided into three phases: Guess and Describe, KubeChallenges, and K
     \item \textbf{Reveal and Score:} Once the active player has finished their description, the card is revealed to everyone.
     \begin{itemize}
         \item \textbf{1 point} for each correct detail (Category, Namespaced/Global, Key function).
-        \item If the player misses any details, the other players have the opportunity to steal the point by providing the correct information.
+        \item If the player misses any details, the other players have the opportunity to \textbf{steal the point}:
+        \begin{itemize}
+            \item Players who know the correct detail can "buzz in" by saying "Buzz!" or raising their hand quickly.
+            \item The first player to buzz in or raise their hand gets the first opportunity to steal.
+            \item If multiple players buzz in at the same time, the chance to steal rotates clockwise starting from the player to the left of the active player.
+            \item Each player has only \textbf{one chance} to provide the correct detail. If they answer correctly, they steal the point. If incorrect, the next player in the rotation gets a chance.
+        \end{itemize}
+        \item If no player can correctly identify the missing detail, the point is forfeited.
     \end{itemize}
     
     \item \textbf{Group Discussion:} After scoring, the group briefly discusses the resource to ensure everyone understands it. The card is then placed face-up on the table so everyone can see and review it.
