@@ -13,8 +13,9 @@ The playing cards and rules are offered in different languages.
 
 ## Disclaimer
 This project was created as a hobby and serves as a showcase/example to help me familiarize myself with the latest AI tools and their possibilities. It is not intended to be a comprehensive or exhaustive resource on Kubernetes or card games, and I do not claim completeness.  
+Nevertheless, I strive for accuracy and can assure you that each card has been reviewed at least once by a person with a solid understanding of Kubernetes.  
 
-I encourage everyone to extend the rules and cards as they see fit to improve or adapt the project. Please note that any modifications or contributions should adhere to the project's licensing terms.
+I encourage everyone to extend the rules and cards as they see fit to improve or adapt the project. Pull requests are welcome. Please note that any modifications or contributions should adhere to the project's licensing terms.
 
 ## License
 The code in this project, including the LaTeX `.tex` files, is licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/). This includes both the LaTeX formatting code and the content (such as text for the cards, rules, and descriptions).  
