@@ -1,0 +1,54 @@
+\documentclass{article}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{stmaryrd}
+\usepackage{marvosym}
+\usepackage{pifont}
+\usepackage{fourier-orns}
+\usepackage{hieroglf}
+\geometry{a4paper, margin=1in}
+
+\title{KubeFlash \\ \large Kubernetes Kartenspiel}
+\author{}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section*{Ziel}
+KubeFlash ist ein Kartenspiel, das dazu entwickelt wurde, den Spielern zu helfen, grundlegende Kubernetes-Ressourcen und -Funktionen zu erlernen und sich mit ihnen vertraut zu machen.
+
+\section*{Spielvorbereitung}
+\begin{itemize}
+    \item \textbf{Spieler:} 2-6
+    \item \textbf{Kartenstapel:} 32 Kubernetes-Ressourcen-Karten
+    \item \textbf{Kategorien:} Workload, Network, Role Based Access Control (RBAC), Configuration, Storage, Event, Sonstiges
+    \item \textbf{Markierungen:} Namespaced {\LARGE$\boxdot$}, Global {\Mundus} oder externe {\textpmhg{w}} Ressource
+\end{itemize}
+
+\section*{Regeln}
+Zu Beginn des Spiels werden die Karten gemischt und verdeckt in einem Nachziehstapel platziert.
+\begin{enumerate}[label=\arabic*.]
+    \item \textbf{Karten ziehen und weitergeben:} Der Spieler links vom aktiven Spieler (derjenige, der die Ressource beschreiben wird) zieht eine Karte \textbf{ohne sie jemandem zu zeigen}. Er \textbf{zeigt nur den Titel} der Karte dem Spieler rechts von ihm (dem aktiven Spieler).
+    
+    \item \textbf{Ressource beschreiben:} Der aktive Spieler muss die Ressource aus dem Gedächtnis beschreiben und dabei Folgendes abdecken:
+    \begin{itemize}
+        \item \textbf{Kategorie} (Workload, Netzwerk, etc.)
+        \item \textbf{Ob es sich um eine namensraumbezogene, globale oder externe Ressource handelt}
+        \item \textbf{Hauptfunktion} oder \textbf{Verwendung} der Ressource
+    \end{itemize}
+    Der Spieler tut dies \textbf{ohne die Karte zu sehen}, sondern verlässt sich vollständig auf sein Wissen.
+    
+    \item \textbf{Aufdecken und Punkten:} Nachdem der aktive Spieler seine Beschreibung beendet hat, wird die Karte allen gezeigt (z.B. auf dem Tisch aufgedeckt). Die Gruppe entscheidet, ob der aktive Spieler die Karte korrekt beschrieben hat in Bezug auf:
+    \begin{itemize}
+        \item \textbf{Kategorie} (Workload, Netzwerk, etc.)
+        \item \textbf{Ob es sich um eine namensraumbezogene, globale oder externe Ressource handelt}
+        \item \textbf{Hauptfunktion} oder \textbf{Verwendung} der Ressource
+    \end{itemize}
+    Die Karte wird dem aktiven Spieler zugeordnet, wenn dieser die Karte korrekt beschrieben hat. Andernfalls wird die Karte auf einen Ablagestapel auf dem Tisch gelegt.
+    
+    \item \textbf{Gruppendiskussion:} Nach der Punktevergabe wird die Ressource kurz in der Gruppe besprochen, um sicherzustellen, dass jeder sie verstanden hat.
+\end{enumerate}
+Sobald der Nachziehstapel leer ist, zählt jeder Spieler die Anzahl der korrekt zugeordneten Karten. Die Spieler mit der höchsten Punktzahl gewinnen. Es kann mehrere Gewinner geben, wenn die Punktzahlen gleich sind.
+\end{document}

@@ -1,0 +1,348 @@
+\documentclass[a4paper,landscape]{article}
+
+%   Pakete dazuladen
+\input{include/libs.tex}
+%   Farbdefinitionen laden
+\input{include/colors.tex}
+%   \card-Commands laden
+\input{include/tikzcards.tex}
+
+\begin{document}
+\begin{center}
+    \pagestyle{empty}
+
+%   V-Space-Korrektur bei langen Titeln
+%   \cardtitle{\vspace{-5mm}SEHR LANGER TITEL}
+
+    \begin{tikzpicture}
+        \cardbackground{img/ai/svc.png}
+        \cardtypeNetwork
+        \cardtitle{Service}
+        \cardcontent{Verbindet Pods, wo immer sie sind.}{Ein Service ist eine Abstraktion, die eine Gruppe von Pods zusammenfasst und eine stabile IP-Adresse sowie DNS-Namen bereitstellt. Er ermöglicht den Zugriff auf diese Pods von anderen Anwendungen oder Nutzern, selbst wenn sich die Pods auf verschiedenen Nodes befinden.}
+        \cardicon{img/k8s/svc-256.png}
+        \cardborder
+        %\carddebug
+    \end{tikzpicture}
+    \hspace{5mm}
+    \begin{tikzpicture}
+        \cardbackground{img/ai/ds.png}
+%       \carddebug
+        \cardtypeWorkload
+        \cardtitle{Daemonset}
+        \cardcontent{Ein Pod pro Knoten, immer.}{Ein DaemonSet stellt sicher, dass eine Kopie eines bestimmten Pods auf jedem Knoten im Cluster ausgeführt wird. Es wird häufig für den Einsatz systemnaher Dienste wie Logging- oder Monitoring-Agenten auf allen Knoten verwendet. Wenn neue Knoten hinzugefügt werden, wird der Pod automatisch darauf bereitgestellt.}
+        \cardicon{img/k8s/ds-256.png}
+        \cardborder
+    \end{tikzpicture}
+    \hspace{5mm}
+    \begin{tikzpicture}
+        \cardbackground{img/ai/role.png}
+        \cardtypeRbac
+        \cardtitle{Role}
+        \cardcontent{Berechtigungen im Fokus, Kontrolle auf den Punkt.}{Eine Rolle definiert Berechtigungen innerhalb eines Namensraums und regelt den Zugriff auf Kubernetes-Ressourcen. Sie sorgt dafür, dass Benutzer oder Anwendungen nur die benötigten Aktionen ausführen können.}
+        \cardicon{img/k8s/role-256.png}
+        \cardborder
+    \end{tikzpicture}
+    \hspace{5mm}
+    \begin{tikzpicture}
+        \cardbackground{img/ai/c-role.png}
+        \cardtypeRbacG
+        \cardtitle{ClusterRole}
+        \cardcontent{Clusterweite Berechtigungen, globale Kontrolle.}{Eine ClusterRole ist ähnlich einer Rolle, jedoch gelten ihre Berechtigungen für das gesamte Cluster und nicht nur für einen einzelnen Namensraum. Sie wird verwendet, um den Zugriff auf clusterweite Ressourcen zu gewähren oder konsistente Berechtigungen über mehrere Namensräume hinweg anzuwenden.}
+        \cardicon{img/k8s/c-role-256.png}
+        \cardborder
+    \end{tikzpicture}
+
+    \vspace{5mm}
+    \begin{tikzpicture}
+        \cardbackground{img/ai/cm.png}
+        \cardtypeConfig
+        \cardtitle{ConfigMap}
+        \cardcontent{Konfigurationen auf einen Blick.}{Eine ConfigMap speichert Schlüssel-Wert-Paare, die Pods für Konfigurationsdaten nutzen können. Sie entkoppelt umgebungsspezifische Konfigurationen von Container-Images, wodurch die Verwaltung und Aktualisierung von Einstellungen ohne Neubau der Images vereinfacht wird.}
+        \cardicon{img/k8s/cm-256.png}
+        \cardborder
+    \end{tikzpicture}
+    \hspace{5mm}
+    \begin{tikzpicture}
+        \cardbackground{img/ai/pvc.png}
+        \cardtypeStorage
+        \cardtitle{Persistent\-Volume\-Claim}
+        \cardcontent{Beanspruche deinen Speicher, sichere deine Daten.}{Ein PersistentVolumeClaim (PVC) ist eine Anfrage nach Speicher durch einen Benutzer. Es abstrahiert die Details der Speicherbereitstellung und verbindet deine Pods mit PersistentVolumes, die den physischen Speicher bereitstellen. PVCs stellen sicher, dass deine Daten auch dann verfügbar bleiben, wenn Pods umgeschichtet oder gelöscht werden.}
+        \cardicon{img/k8s/pvc-256.png}
+        \cardborder
+    \end{tikzpicture}
+    \hspace{5mm}
+    \begin{tikzpicture}
+        \cardbackground{img/ai/node.png}
+        \cardtypeMiscG
+        \cardtitle{Node}
+        \cardcontent{Das Rückgrat deines Clusters.}{Ein Node ist eine physische oder virtuelle Maschine, die deine Anwendungen und Workloads in Kubernetes ausführt. Es ist das grundlegende Bauteil eines Clusters und stellt die CPU, den Arbeitsspeicher und die Netzwerkressourcen zur Verfügung, die zum Ausführen deiner Pods notwendig sind.}
+        \cardicon{img/k8s/node-256.png}
+        \cardborder
+    \end{tikzpicture}
+    \hspace{5mm}
+    \begin{tikzpicture}
+        \cardbackground{img/ai/node-failure.png}
+        \cardtypeEvent
+        \cardtitle{Node-Ausfall}
+        \cardcontent{Ein Node fällt aus – das Cluster bleibt am Leben!}{Ein Node-Ausfall-Ereignis tritt auf, wenn einer der Knoten im Cluster nicht mehr erreichbar ist oder seine Funktion einstellt. Kubernetes plant die Pods vom ausgefallenen Node automatisch auf andere verfügbare Nodes um, um die Anwendungskontinuität sicherzustellen. Dies testet die Resilienz deines Clusters und hebt die Bedeutung der Ressourcenkontrolle hervor.}
+        %\cardprice{$\infty$}
+        %\cardicon{img/k8s/svc-256.png}
+        \cardborder
+    \end{tikzpicture}
+\end{center}
+
+\newpage
+
+\begin{center}
+    \pagestyle{empty}
+
+%   V-Space-Korrektur bei langen Titeln
+%   \cardtitle{\vspace{-5mm}SEHR LANGER TITEL}
+
+    \begin{tikzpicture}
+        \cardbackground{img/ai/ing.png}
+        \cardtypeNetwork
+        \cardtitle{Ingress}
+        \cardcontent{Dein Gateway zum Cluster.}{Ein Ingress steuert den externen Zugriff auf Services in einem Cluster, indem es HTTP/HTTPS-Anfragen an die richtigen Pods weiterleitet. Es ermöglicht eine zentrale Verwaltung des Traffics und unterstützt Funktionen wie SSL-Termination und URL-Routing.}
+        \cardicon{img/k8s/ing-256.png}
+        \cardborder
+%       \carddebug
+    \end{tikzpicture}
+    \hspace{5mm}
+    \begin{tikzpicture}
+        \cardbackground{img/ai/pod.png}
+%       \carddebug
+        \cardtypeWorkload
+        \cardtitle{Pod}
+        \cardcontent{Die kleinste deploybare Einheit.}{Ein Pod ist das kleinste und einfachste Kubernetes-Objekt, das eine einzelne Instanz eines laufenden Prozesses in deinem Cluster darstellt. Er kann ein oder mehrere Container enthalten, die denselben Netzwerk-Namespace und Speicher teilen. Pods sind die grundlegenden Bausteine, um Anwendungen in Kubernetes bereitzustellen.}
+        \cardicon{img/k8s/pod-256.png}
+        \cardborder
+    \end{tikzpicture}
+    \hspace{5mm}
+    \begin{tikzpicture}
+        \cardbackground{img/ai/sa.png}
+        \cardtypeRbac
+        \cardtitle{ServiceAccount}
+        \cardcontent{Identität für deine Pods.}{Ein ServiceAccount stellt eine Identität für Prozesse zur Verfügung, die in einem Pod laufen, und ermöglicht diesen, mit der Kubernetes-API zu interagieren. Er gewährt Berechtigungen und Tokens, die steuern, welche Aktionen der Pod innerhalb des Clusters durchführen kann.}
+        \cardicon{img/k8s/sa-256.png}
+        \cardborder
+    \end{tikzpicture}
+    \hspace{5mm}
+    \begin{tikzpicture}
+        \cardbackground{img/ai/crd.png}
+        \cardtypeMiscG
+        \cardtitle{Custom\-Resource\-Definition}
+        \cardcontent{Erweitere Kubernetes nach deinen Wünschen.}{Eine CustomResourceDefinition (CRD) erlaubt es dir, eigene Ressourcen in Kubernetes zu erstellen, die über die Standardobjekte hinausgehen. CRDs erweitern Kubernetes, sodass du anwendungsspezifische Konfigurationen oder Funktionen definieren und verwalten kannst.}
+        \cardicon{img/k8s/crd-256.png}
+        \cardborder
+    \end{tikzpicture}
+
+    \vspace{5mm}
+    \begin{tikzpicture}
+        \cardbackground{img/ai/secret.png}
+        \cardtypeConfig
+        \cardtitle{Secret}
+        \cardcontent{Halte es sicher, halte es geheim.}{Ein Secret speichert sensible Informationen wie Passwörter und wird sicherer als ConfigMaps behandelt. Es wird verschlüsselt gespeichert und an Pods weitergegeben, um geheime Daten sicher zu nutzen.}
+        \cardicon{img/k8s/secret-256.png}
+        \cardborder
+    \end{tikzpicture}
+    \hspace{5mm}
+    \begin{tikzpicture}
+        \cardbackground{img/ai/sc.png}
+        \cardtypeStorage
+        \cardtitle{StorageClass}
+        \cardcontent{Definiere deine Speicherstrategie.}{Eine StorageClass bietet eine Möglichkeit, die verschiedenen Klassen von Speicher in einem Kubernetes-Cluster zu beschreiben. Sie abstrahiert die Speicherbereitstellung und ermöglicht es PVCs, automatisch bestimmte Speicherarten anzufordern (z. B. SSDs, NFS). StorageClasses ermöglichen eine flexible und automatisierte Speicherverwaltung.}
+        \cardicon{img/k8s/sc-256.png}
+        \cardborder
+    \end{tikzpicture}
+    \hspace{5mm}
+    \begin{tikzpicture}
+        \cardbackground{img/ai/ns.png}
+        \cardtypeMiscG
+        \cardtitle{Namespace}
+        \cardcontent{Abgrenzung innerhalb des Clusters.}{Ein Namespace ist eine logische Partition eines Kubernetes-Clusters, die dazu dient, Ressourcen voneinander zu isolieren und zu organisieren. Es ermöglicht mehrere Projekte oder Teams innerhalb desselben Clusters, ohne sich gegenseitig zu stören. Namespaces helfen, Konflikte zu vermeiden und vereinfachen das Ressourcenmanagement.}
+        \cardicon{img/k8s/ns-256.png}
+        \cardborder
+    \end{tikzpicture}
+    \hspace{5mm}
+    \begin{tikzpicture}
+        \cardbackground{img/ai/cve.png}
+        \cardtypeEvent
+		\cardtitle{Neue CVE}
+		\cardcontent{Sicherheitslücke entdeckt – Patchen oder verlieren!}{Ein offengelegtes CVE Ereignis bedeutet, dass eine Sicherheitslücke in einem deiner Container oder Kubernetes-Komponenten entdeckt wurde. Sofortige Maßnahmen sind erforderlich, um die betroffenen Systeme zu patchen oder anfällige Images zu aktualisieren.}
+        %\cardprice{$\infty$}
+        %\cardicon{img/k8s/svc-256.png}
+        \cardborder
+    \end{tikzpicture}
+\end{center}
+
+\newpage
+
+\begin{center}
+    \pagestyle{empty}
+
+%   V-Space-Korrektur bei langen Titeln
+%   \cardtitle{\vspace{-5mm}SEHR LANGER TITEL}
+
+    \begin{tikzpicture}
+        \cardbackground{img/ai/ingress-controller.png}
+        \cardtypeNetwork
+        \cardtitle{Ingress\-Controller}
+        \cardcontent{Traffic Control am Rand.}{Ein IngressController implementiert die Regeln einer Ingress-Ressource. Er verarbeitet eingehende HTTP/S-Anfragen und leitet sie an die entsprechenden Services im Cluster weiter. IngressController sind entscheidend für das Management des externen Verkehrs und sorgen dafür, dass dieser die richtigen Endpunkte erreicht.}
+        \cardicon{img/k8s/pod-256.png}
+        \cardborder
+%       \carddebug
+    \end{tikzpicture}
+    \hspace{5mm}
+    \begin{tikzpicture}
+        \cardbackground{img/ai/rs.png}
+%       \carddebug
+        \cardtypeWorkload
+        \cardtitle{ReplicaSet}
+        \cardcontent{Halte Deine Pods am Laufen.}{Ein ReplicaSet stellt sicher, dass eine festgelegte Anzahl identischer Pods immer im Cluster läuft. Es ersetzt automatisch Pods, die fehlschlagen oder gelöscht werden, und stellt so den gewünschten Zustand sicher. ReplicaSets sind entscheidend für die Gewährleistung der hohen Verfügbarkeit und Skalierung deiner Anwendungen.}
+        \cardicon{img/k8s/rs-256.png}
+        \cardborder
+    \end{tikzpicture}
+    \hspace{5mm}
+    \begin{tikzpicture}
+        \cardbackground{img/ai/rb.png}
+        \cardtypeRbac
+        \cardtitle{RoleBinding}
+        \cardcontent{Verknüpfung von Rollen mit Benutzern.}{Ein RoleBinding gewährt einem Benutzer, einer Gruppe oder einem ServiceAccount innerhalb eines bestimmten Namensraums spezifische Berechtigungen, indem es sie mit einer Rolle verknüpft. Es ist die Art und Weise, wie die Zugriffskontrollregeln, die in einer Rolle definiert sind, auf tatsächliche Benutzer oder Dienste angewendet werden.}
+        \cardicon{img/k8s/rb-256.png}
+        \cardborder
+    \end{tikzpicture}
+    \hspace{5mm}
+    \begin{tikzpicture}
+        \cardbackground{img/ai/crb.png}
+        \cardtypeRbacG
+        \cardtitle{ClusterRole\-Binding}
+        \cardcontent{Clusterweite Zugriffskontrolle.}{Ein ClusterRoleBinding gewährt einem Benutzer, einer Gruppe oder einem ServiceAccount clusterweite Berechtigungen, indem es sie mit einer ClusterRole verknüpft. Es ermöglicht, Zugriffskontrollregeln auf alle Namensräume anzuwenden. ClusterRoleBindings sind entscheidend für das Management von Sicherheit und Berechtigungen auf globaler Ebene.}
+        \cardicon{img/k8s/crb-256.png}
+        \cardborder
+    \end{tikzpicture}
+
+    \vspace{5mm}
+    \begin{tikzpicture}
+        \cardbackground{img/ai/job.png}
+        \cardtypeWorkload
+        \cardtitle{Job}
+        \cardcontent{Führe Aufgaben bis zum Abschluss aus.}{Ein Job erstellt einen oder mehrere Pods, die bis zum Abschluss laufen und sicherstellen, dass eine bestimmte Aufgabe eine definierte Anzahl von Malen ausgeführt wird. Sobald die Pods ihre Aufgabe abgeschlossen haben, wird der Job als abgeschlossen betrachtet. Jobs eignen sich ideal für einmalige oder seltene Batch-Verarbeitungen.}
+        \cardicon{img/k8s/job-256.png}
+        \cardborder
+    \end{tikzpicture}
+    \hspace{5mm}
+    \begin{tikzpicture}
+        \cardbackground{img/ai/pv.png}
+        \cardtypeStorageG
+        \cardtitle{Persistent\-Volume}
+        \cardcontent{Bereitgestellter Speicher für Deinen Cluster.}{Ein PersistentVolume (PV) ist ein Speicherstück im Cluster, das von einem Administrator oder dynamisch durch eine StorageClass bereitgestellt wurde. Es wird von PersistentVolumeClaims verwendet, um Daten über die Lebensdauer einzelner Pods hinaus zu speichern. PVs bieten dauerhaften Speicher, der auch dann verfügbar bleibt, wenn Pods gelöscht werden.}
+        \cardicon{img/k8s/pv-256.png}
+        \cardborder
+    \end{tikzpicture}
+    \hspace{5mm}
+    \begin{tikzpicture}
+        \cardbackground{img/ai/netpol.png}
+        \cardtypeNetwork
+        \cardtitle{NetworkPolicy}
+        \cardcontent{Steuere den Datenverkehr, sichere deinen Cluster.}{Eine NetworkPolicy ist eine Reihe von Regeln, die definieren, wie Pods miteinander und mit externen Endpunkten kommunizieren können. Sie steuert den Datenverkehr auf Netzwerkebene und gibt an, welche Verbindungen erlaubt oder abgelehnt werden.}
+        \cardicon{img/k8s/netpol-256.png}
+        \cardborder
+    \end{tikzpicture}
+    \hspace{5mm}
+    \begin{tikzpicture}
+        \cardbackground{img/ai/pod-restart.png}
+        \cardtypeEvent
+        \cardtitle{Pod-Neustart}
+        \cardcontent{Ein Pod stürzt ab – Kubernetes startet ihn neu!}{Ein Pod-Neustart-Ereignis tritt auf, wenn ein Pod abstürzt oder unerwartet beendet wird, was Kubernetes dazu veranlasst, ihn automatisch neu zu starten. Dieser Selbstheilungsmechanismus trägt dazu bei, die Betriebszeit der Anwendung aufrechtzuerhalten und sicherzustellen, dass die Dienste trotz gelegentlicher Fehler verfügbar bleiben.}
+        %\cardprice{$\infty$}
+        %\cardicon{img/k8s/svc-256.png}
+        \cardborder
+    \end{tikzpicture}
+\end{center}
+
+\newpage
+
+\begin{center}
+    \pagestyle{empty}
+
+%   V-Space-Korrektur bei langen Titeln
+%   \cardtitle{\vspace{-5mm}SEHR LANGER TITEL}
+
+    \begin{tikzpicture}
+        \cardbackground{img/ai/deploy.png}
+        \cardtypeWorkload
+        \cardtitle{Deployment}
+        \cardcontent{Verwalte und skaliere Deine Pods.}{Ein Deployment automatisiert die Erstellung, das Update und die Skalierung von Pods in einem ReplicaSet. Es stellt sicher, dass deine Anwendung konsistent läuft, indem Updates ausgerollt und nach Bedarf skaliert werden. Deployments sind entscheidend für das Management des Lebenszyklus von zustandslosen Anwendungen in Kubernetes.}
+        \cardicon{img/k8s/deploy-256.png}
+        \cardborder
+%       \carddebug
+    \end{tikzpicture}
+    \hspace{5mm}
+    \begin{tikzpicture}
+        \cardbackground{img/ai/sts.png}
+%       \carddebug
+        \cardtypeWorkload
+        \cardtitle{StatefulSet}
+        \cardcontent{Persistente Identität, stabiler Speicher.}{Ein StatefulSet verwaltet die Bereitstellung und Skalierung von Pods mit einzigartigen Identitäten und stabilem Speicher. Es wird für zustandsbehaftete Anwendungen verwendet, bei denen jeder Pod seinen Zustand über Neustarts bewahren muss. StatefulSets garantieren, dass Pods in einer konsistenten Reihenfolge laufen und stabile Namen behalten.}
+        \cardicon{img/k8s/sts-256.png}
+        \cardborder
+    \end{tikzpicture}
+    \hspace{5mm}
+    \begin{tikzpicture}
+        \cardbackground{img/ai/hpa.png}
+        \cardtypeWorkload
+        \cardtitle{Horizontal\-Pod\-Auto\-Scaler}
+        \cardcontent{Skaliere nach Bedarf.}{Ein HorizontalPodAutoscaler passt automatisch die Anzahl der Pods in einem Deployment, ReplicaSet oder StatefulSet basierend auf beobachteter CPU-Nutzung oder anderen ausgewählten Metriken an. Er sorgt dafür, dass deine Anwendungen mit wechselnden Lasten umgehen können, indem Ressourcen je nach Bedarf skaliert werden.}
+        \cardicon{img/k8s/hpa-256.png}
+        \cardborder
+    \end{tikzpicture}
+    \hspace{5mm}
+    \begin{tikzpicture}
+        \cardbackground{img/ai/group.png}
+        \cardtypeRbacO
+        \cardtitle{Gruppe}
+        \cardcontent{Organisiere Benutzer, vereinfache den Zugriff.}{Eine Gruppe ist eine Sammlung von Benutzern in Kubernetes, die gemeinsam Rollen und Berechtigungen zugewiesen bekommen können. Gruppen vereinfachen das Management der Zugriffskontrollen, indem Administratoren Richtlinien für mehrere Benutzer gleichzeitig anwenden können.}
+        \cardicon{img/k8s/group-256.png}
+        \cardborder
+    \end{tikzpicture}
+
+    \vspace{5mm}
+    \begin{tikzpicture}
+        \cardbackground{img/ai/cronjob.png}
+        \cardtypeWorkload
+        \cardtitle{CronJob}
+        \cardcontent{Geplante Aufgaben, automatisiert.}{Ein CronJob erstellt Jobs basierend auf einem zeitbasierten Zeitplan und ermöglicht es, Aufgaben in regelmäßigen Abständen auszuführen. Er eignet sich ideal für wiederkehrende Aufgaben wie Backups, Berichte oder Wartungsskripte. CronJobs automatisieren routinemäßige Operationen, sodass diese regelmäßig ohne manuelle Eingriffe ausgeführt werden.}
+        \cardicon{img/k8s/cronjob-256.png}
+        \cardborder
+    \end{tikzpicture}
+    \hspace{5mm}
+    \begin{tikzpicture}
+        \cardbackground{img/ai/ep.png}
+        \cardtypeNetwork
+        \cardtitle{EndpointSlice}
+        \cardcontent{Effiziente Dienstentdeckung.}{Ein EndpointSlice bietet eine skalierbare Möglichkeit, Netzwerk-Endpunkte zu verfolgen, wodurch die Effizienz der Dienstentdeckung innerhalb großer Cluster verbessert wird. Es unterteilt die Liste der Endpunkte in kleinere Teile, was das Management und die Skalierung von Diensten erleichtert. EndpointSlices verbessern die Leistung des Netzwerks in k8s.}
+        \cardicon{img/k8s/ep-256.png}
+        \cardborder
+    \end{tikzpicture}
+    \hspace{5mm}
+    \begin{tikzpicture}
+        \cardbackground{img/ai/user.png}
+        \cardtypeRbacO
+        \cardtitle{Benutzer}
+        \cardcontent{Zugriffskontrolle beginnt hier.}{Ein Benutzer repräsentiert eine Einzelperson oder einen Dienst, der mit der Kubernetes-API interagiert. Benutzer werden authentifiziert, um festzustellen, welche Aktionen sie im Cluster ausführen dürfen. Eine ordnungsgemäße Verwaltung der Benutzer ist entscheidend für die Sicherheit deiner Kubernetes-Umgebung.}
+        \cardicon{img/k8s/user-256.png}
+        \cardborder
+    \end{tikzpicture}
+    \hspace{5mm}
+    \begin{tikzpicture}
+        \cardbackground{img/ai/custom-resource.png}
+        \cardtypeMisc
+        \cardtitle{CustomResource}
+        \cardcontent{Maßgeschneidert auf deine Bedürfnisse.}{Eine CustomResource erweitert Kubernetes um eigene Objekttypen, die du für anwendungsspezifische Konfigurationen nutzen kannst. Sie ermöglicht es, Ressourcen zu erstellen und zu verwalten, die nicht Teil der Standard-Kubernetes-API sind.}
+        %\cardicon{img/k8s/svc-256.png}
+        \cardborder
+    \end{tikzpicture}
+\end{center}
+
+\end{document}
