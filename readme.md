@@ -1,6 +1,6 @@
 # Kubernetes flash and playing cards
-| ![Secret Card](extracts/secret-alpha.png) | ![Namespace Card](extracts/ns-alpha.png) | ![Pod Card](extracts/pod-alpha.png) | ![Storage Class Card](extracts/sc-alpha.png) | ![CVE Card](extracts/cve-alpha.png) |
-|-----------------------|-----------------------|-----------------------|-----------------------|-----------------------|
+| ![Secret Card](extracts/secret-alpha.png) | ![Namespace Card](extracts/ns-alpha.png) | ![Pod Card](extracts/pod-alpha.png) | ![Storage Class Card](extracts/sc-alpha.png) | | ![Ingress Card](extracts/ing-alpha.png) | ![CVE Card](extracts/cve-alpha.png) |
+|-----------------------|-----------------------|-----------------------|-----------------------|-----------------------|-----------------------|
 
 This project contains a set of 32 Kubernetes-themed flash and playing cards designed to help you familiarize yourself with the basic Kubernetes resources and their usage. Each card features a key Kubernetes resource, such as Pods, Deployments, Services, and ConfigMaps, along with useful information to reinforce your understanding.  
 The cards are paired with a set of game rules, allowing you to learn in a group setting while having fun. Whether you're a beginner or looking to sharpen your Kubernetes knowledge, this card game provides an interactive and engaging way to master Kubernetes concepts.  
