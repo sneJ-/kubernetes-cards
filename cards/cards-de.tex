@@ -29,7 +29,7 @@
 %       \carddebug
         \cardtypeWorkload
         \cardtitle{Daemonset}
-        \cardcontent{Ein Pod pro Knoten, immer.}{Ein DaemonSet stellt sicher, dass eine Kopie eines bestimmten Pods auf jedem Knoten im Cluster ausgeführt wird. Es wird häufig für den Einsatz systemnaher Dienste wie Logging- oder Monitoring-Agenten auf allen Knoten verwendet. Wenn neue Knoten hinzugefügt werden, wird der Pod automatisch darauf bereitgestellt.}
+        \cardcontent{Ein Pod pro Node, immer.}{Ein DaemonSet stellt sicher, dass eine Kopie eines bestimmten Pods auf jeder Node im Cluster ausgeführt wird. Es wird häufig für den Einsatz systemnaher Dienste wie Logging- oder Monitoring-Agenten auf allen Nodes verwendet. Wenn neue Nodes hinzugefügt werden, wird der Pod automatisch darauf bereitgestellt.}
         \cardicon{img/k8s/ds-256.png}
         \cardborder
     \end{tikzpicture}
@@ -38,7 +38,7 @@
         \cardbackground{img/ai/role.png}
         \cardtypeRbac
         \cardtitle{Role}
-        \cardcontent{Berechtigungen im Fokus, Kontrolle auf den Punkt.}{Eine Rolle definiert Berechtigungen innerhalb eines Namensraums und regelt den Zugriff auf Kubernetes-Ressourcen. Sie sorgt dafür, dass Benutzer oder Anwendungen nur die benötigten Aktionen ausführen können.}
+        \cardcontent{Berechtigungen im Fokus, Kontrolle auf den Punkt.}{Eine Rolle definiert Berechtigungen innerhalb eines Namespaces und regelt den Zugriff auf Kubernetes-Ressourcen. Sie sorgt dafür, dass Benutzer oder Anwendungen nur die benötigten Aktionen ausführen können.}
         \cardicon{img/k8s/role-256.png}
         \cardborder
     \end{tikzpicture}
@@ -47,7 +47,7 @@
         \cardbackground{img/ai/c-role.png}
         \cardtypeRbacG
         \cardtitle{ClusterRole}
-        \cardcontent{Clusterweite Berechtigungen, globale Kontrolle.}{Eine ClusterRole ist ähnlich einer Rolle, jedoch gelten ihre Berechtigungen für das gesamte Cluster und nicht nur für einen einzelnen Namensraum. Sie wird verwendet, um den Zugriff auf clusterweite Ressourcen zu gewähren oder konsistente Berechtigungen über mehrere Namensräume hinweg anzuwenden.}
+        \cardcontent{Clusterweite Berechtigungen, globale Kontrolle.}{Eine ClusterRole ist ähnlich einer Rolle, jedoch gelten ihre Berechtigungen für das gesamte Cluster und nicht nur für einen einzelnen Namespace. Sie wird verwendet, um den Zugriff auf clusterweite Ressourcen zu gewähren oder konsistente Berechtigungen über mehrere Namespaces hinweg anzuwenden.}
         \cardicon{img/k8s/c-role-256.png}
         \cardborder
     \end{tikzpicture}
@@ -66,7 +66,7 @@
         \cardbackground{img/ai/pvc.png}
         \cardtypeStorage
         \cardtitle{Persistent\-Volume\-Claim}
-        \cardcontent{Beanspruche deinen Speicher, sichere deine Daten.}{Ein PersistentVolumeClaim (PVC) ist eine Anfrage nach Speicher durch einen Benutzer. Es abstrahiert die Details der Speicherbereitstellung und verbindet deine Pods mit PersistentVolumes, die den physischen Speicher bereitstellen. PVCs stellen sicher, dass deine Daten auch dann verfügbar bleiben, wenn Pods umgeschichtet oder gelöscht werden.}
+        \cardcontent{Beantrage deinen Speicher, sichere deine Daten.}{Ein PersistentVolumeClaim (PVC) ist eine Anfrage nach Speicher durch einen Benutzer. Es abstrahiert die Details der Speicherbereitstellung und verbindet deine Pods mit PersistentVolumes, die den physischen Speicher bereitstellen. PVCs stellen sicher, dass deine Daten auch dann verfügbar bleiben, wenn Pods verschoben oder gelöscht werden.}
         \cardicon{img/k8s/pvc-256.png}
         \cardborder
     \end{tikzpicture}
@@ -84,7 +84,7 @@
         \cardbackground{img/ai/node-failure.png}
         \cardtypeEvent
         \cardtitle{Node-Ausfall}
-        \cardcontent{Ein Node fällt aus – das Cluster bleibt am Leben!}{Ein Node-Ausfall-Ereignis tritt auf, wenn einer der Knoten im Cluster nicht mehr erreichbar ist oder seine Funktion einstellt. Kubernetes plant die Pods vom ausgefallenen Node automatisch auf andere verfügbare Nodes um, um die Anwendungskontinuität sicherzustellen. Dies testet die Resilienz deines Clusters und hebt die Bedeutung der Ressourcenkontrolle hervor.}
+        \cardcontent{Ein Node fällt aus – das Cluster bleibt am Leben!}{Ein Node-Ausfall-Ereignis tritt auf, wenn eine der Nodes im Cluster nicht mehr erreichbar ist oder ihre Funktion einstellt. Kubernetes verschiebt die Pods der ausgefallenen Node automatisch auf andere verfügbare Nodes, um die Anwendungskontinuität sicherzustellen. Dies testet die Resilienz deines Clusters und hebt die Bedeutung der Ressourcenverteilung hervor.}
         %\cardprice{$\infty$}
         %\cardicon{img/k8s/svc-256.png}
         \cardborder
@@ -103,7 +103,7 @@
         \cardbackground{img/ai/ing.png}
         \cardtypeNetwork
         \cardtitle{Ingress}
-        \cardcontent{Dein Gateway zum Cluster.}{Ein Ingress steuert den externen Zugriff auf Services in einem Cluster, indem es HTTP/HTTPS-Anfragen an die richtigen Pods weiterleitet. Es ermöglicht eine zentrale Verwaltung des Traffics und unterstützt Funktionen wie SSL-Termination und URL-Routing.}
+        \cardcontent{Dein Gateway zum Cluster.}{Ein Ingress ist ein k8s Objekt, das externen Zugriff auf Cluster-Dienste, meist über HTTP oder HTTPS, ermöglicht. Er leitet den Datenverkehr anhand von Regeln wie URL-Pfaden zu den passenden Diensten und erlaubt es, mehrere Dienste über eine einzige IP-Adresse bereitzustellen.}
         \cardicon{img/k8s/ing-256.png}
         \cardborder
 %       \carddebug
@@ -114,7 +114,7 @@
 %       \carddebug
         \cardtypeWorkload
         \cardtitle{Pod}
-        \cardcontent{Die kleinste deploybare Einheit.}{Ein Pod ist das kleinste und einfachste Kubernetes-Objekt, das eine einzelne Instanz eines laufenden Prozesses in deinem Cluster darstellt. Er kann ein oder mehrere Container enthalten, die denselben Netzwerk-Namespace und Speicher teilen. Pods sind die grundlegenden Bausteine, um Anwendungen in Kubernetes bereitzustellen.}
+        \cardcontent{Die kleinstmögliche Ausführungseinheit.}{Ein Pod ist das kleinste und einfachste Kubernetes-Objekt, das eine einzelne Instanz eines laufenden Prozesses in deinem Cluster darstellt. Er kann ein oder mehrere Container enthalten, die denselben Netzwerk-Namespace und Speicher teilen. Pods sind die grundlegenden Bausteine, um Anwendungen in Kubernetes bereitzustellen.}
         \cardicon{img/k8s/pod-256.png}
         \cardborder
     \end{tikzpicture}
@@ -142,7 +142,7 @@
         \cardbackground{img/ai/secret.png}
         \cardtypeConfig
         \cardtitle{Secret}
-        \cardcontent{Halte es sicher, halte es geheim.}{Ein Secret speichert sensible Informationen wie Passwörter und wird sicherer als ConfigMaps behandelt. Es wird verschlüsselt gespeichert und an Pods weitergegeben, um geheime Daten sicher zu nutzen.}
+        \cardcontent{Halte es sicher, halte es geheim.}{Ein Secret speichert sensible Daten wie Passwörter, Tokens oder Schlüssel sicher im Cluster. Es trennt diese vom Anwendungscode und schützt sie vor Klartext-Offenlegung, was die Sicherheit in Kubernetes verbessert.}
         \cardicon{img/k8s/secret-256.png}
         \cardborder
     \end{tikzpicture}
@@ -151,7 +151,7 @@
         \cardbackground{img/ai/sc.png}
         \cardtypeStorage
         \cardtitle{StorageClass}
-        \cardcontent{Definiere deine Speicherstrategie.}{Eine StorageClass bietet eine Möglichkeit, die verschiedenen Klassen von Speicher in einem Kubernetes-Cluster zu beschreiben. Sie abstrahiert die Speicherbereitstellung und ermöglicht es PVCs, automatisch bestimmte Speicherarten anzufordern (z. B. SSDs, NFS). StorageClasses ermöglichen eine flexible und automatisierte Speicherverwaltung.}
+        \cardcontent{Definiere deine Speicherstrategie.}{Eine StorageClass bietet eine Möglichkeit, die verschiedenen Klassen von Speicher in einem Kubernetes-Cluster zu beschreiben. Sie abstrahiert die Speicherbereitstellung und ermöglicht es PVCs, automatisch bestimmte Speicherarten anzufordern (z.B. SSDs, NFS). StorageClasses ermöglichen eine flexible und automatisierte Speicherverwaltung.}
         \cardicon{img/k8s/sc-256.png}
         \cardborder
     \end{tikzpicture}
@@ -160,7 +160,7 @@
         \cardbackground{img/ai/ns.png}
         \cardtypeMiscG
         \cardtitle{Namespace}
-        \cardcontent{Abgrenzung innerhalb des Clusters.}{Ein Namespace ist eine logische Partition eines Kubernetes-Clusters, die dazu dient, Ressourcen voneinander zu isolieren und zu organisieren. Es ermöglicht mehrere Projekte oder Teams innerhalb desselben Clusters, ohne sich gegenseitig zu stören. Namespaces helfen, Konflikte zu vermeiden und vereinfachen das Ressourcenmanagement.}
+        \cardcontent{Abgrenzung innerhalb des Clusters.}{Ein Namespace ist eine logische Partition eines Kubernetes-Clusters, die dazu dient, Ressourcen voneinander zu isolieren und zu organisieren. Er ermöglicht mehrere Projekte oder Teams innerhalb desselben Clusters, ohne sich gegenseitig zu stören. Namespaces helfen, Konflikte zu vermeiden und vereinfachen das Ressourcenmanagement.}
         \cardicon{img/k8s/ns-256.png}
         \cardborder
     \end{tikzpicture}
@@ -168,7 +168,7 @@
     \begin{tikzpicture}
         \cardbackground{img/ai/cve.png}
         \cardtypeEvent
-		\cardtitle{Neue CVE}
+		\cardtitle{Aufgedeckte CVE}
 		\cardcontent{Sicherheitslücke entdeckt – Patchen oder verlieren!}{Ein offengelegtes CVE Ereignis bedeutet, dass eine Sicherheitslücke in einem deiner Container oder Kubernetes-Komponenten entdeckt wurde. Sofortige Maßnahmen sind erforderlich, um die betroffenen Systeme zu patchen oder anfällige Images zu aktualisieren.}
         %\cardprice{$\infty$}
         %\cardicon{img/k8s/svc-256.png}
@@ -188,7 +188,7 @@
         \cardbackground{img/ai/ingress-controller.png}
         \cardtypeNetwork
         \cardtitle{Ingress\-Controller}
-        \cardcontent{Traffic Control am Rand.}{Ein IngressController implementiert die Regeln einer Ingress-Ressource. Er verarbeitet eingehende HTTP/S-Anfragen und leitet sie an die entsprechenden Services im Cluster weiter. IngressController sind entscheidend für das Management des externen Verkehrs und sorgen dafür, dass dieser die richtigen Endpunkte erreicht.}
+        \cardcontent{Verkehrskontrolle an der Grenze.}{Ein IngressController implementiert die Regeln einer Ingress-Ressource. Er verarbeitet eingehende HTTP/S-Anfragen und leitet sie an die entsprechenden Services im Cluster weiter. IngressController sind entscheidend für das Management des externen Verkehrs und sorgen dafür, dass dieser die richtigen Endpunkte erreicht.}
         \cardicon{img/k8s/pod-256.png}
         \cardborder
 %       \carddebug
@@ -208,7 +208,7 @@
         \cardbackground{img/ai/rb.png}
         \cardtypeRbac
         \cardtitle{RoleBinding}
-        \cardcontent{Verknüpfung von Rollen mit Benutzern.}{Ein RoleBinding gewährt einem Benutzer, einer Gruppe oder einem ServiceAccount innerhalb eines bestimmten Namensraums spezifische Berechtigungen, indem es sie mit einer Rolle verknüpft. Es ist die Art und Weise, wie die Zugriffskontrollregeln, die in einer Rolle definiert sind, auf tatsächliche Benutzer oder Dienste angewendet werden.}
+        \cardcontent{Verknüpfung von Rollen mit Benutzern.}{Ein RoleBinding gewährt einem Benutzer, einer Gruppe oder einem ServiceAccount innerhalb eines bestimmten Namespaces spezifische Berechtigungen, indem es sie mit einer Rolle verknüpft. Es ist die Art und Weise, wie die Zugriffskontrollregeln, die in einer Rolle definiert sind, auf tatsächliche Benutzer oder Dienste angewendet werden.}
         \cardicon{img/k8s/rb-256.png}
         \cardborder
     \end{tikzpicture}
@@ -312,7 +312,7 @@
         \cardbackground{img/ai/cronjob.png}
         \cardtypeWorkload
         \cardtitle{CronJob}
-        \cardcontent{Geplante Aufgaben, automatisiert.}{Ein CronJob erstellt Jobs basierend auf einem zeitbasierten Zeitplan und ermöglicht es, Aufgaben in regelmäßigen Abständen auszuführen. Er eignet sich ideal für wiederkehrende Aufgaben wie Backups, Berichte oder Wartungsskripte. CronJobs automatisieren routinemäßige Operationen, sodass diese regelmäßig ohne manuelle Eingriffe ausgeführt werden.}
+        \cardcontent{Geplante Aufgaben, automatisiert.}{Ein CronJob erstellt Jobs basierend auf einem Zeitplan und ermöglicht es, Aufgaben in regelmäßigen Abständen auszuführen. Er eignet sich ideal für wiederkehrende Aufgaben wie Backups, Berichte oder Wartungsskripte. CronJobs automatisieren routinemäßige Operationen, sodass diese regelmäßig ohne manuelle Eingriffe ausgeführt werden.}
         \cardicon{img/k8s/cronjob-256.png}
         \cardborder
     \end{tikzpicture}
@@ -321,7 +321,7 @@
         \cardbackground{img/ai/ep.png}
         \cardtypeNetwork
         \cardtitle{EndpointSlice}
-        \cardcontent{Effiziente Dienstentdeckung.}{Ein EndpointSlice bietet eine skalierbare Möglichkeit, Netzwerk-Endpunkte zu verfolgen, wodurch die Effizienz der Dienstentdeckung innerhalb großer Cluster verbessert wird. Es unterteilt die Liste der Endpunkte in kleinere Teile, was das Management und die Skalierung von Diensten erleichtert. EndpointSlices verbessern die Leistung des Netzwerks in k8s.}
+        \cardcontent{Effiziente Dienstentdeckung.}{EndpointSlices gruppieren Netzwerkendpunkte (z.B. Pods) für einen Kubernetes-Service basierend auf dessen Selector und verwalten sie nach Protokoll, Port und Servicename. Sie werden automatisch vom Control Plane erstellt und verbessern die Skalierbarkeit und Effizienz des Netzwerkverkehrs. Jeder EndpointSlice hat einen DNS-konformen Namen.}
         \cardicon{img/k8s/ep-256.png}
         \cardborder
     \end{tikzpicture}

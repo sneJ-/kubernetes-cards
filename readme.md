@@ -1,6 +1,6 @@
 # Kubernetes flash and playing cards
-| ![Secret Card](extracts/secret.png) | ![Namespace Card](extracts/ns.png) | ![Pod Card](extracts/pod.png) | ![CVE Card](extracts/cve.png) |
-|-----------------------|-----------------------|-----------------------|-----------------------|
+| ![Secret Card](extracts/secret-alpha.png) | ![Namespace Card](extracts/ns-alpha.png) | ![Pod Card](extracts/pod-alpha.png) | ![Storage Class Card](extracts/sc-alpha.png) | ![CVE Card](extracts/cve.png) |
+|-----------------------|-----------------------|-----------------------|-----------------------|-----------------------|
 
 This project contains a set of 32 Kubernetes-themed flash/playing cards designed to help you familiarize yourself with the basic Kubernetes resources and their usage. Each card features a key Kubernetes resource, such as Pods, Deployments, Services, and ConfigMaps, along with useful information to reinforce your understanding.  
 The cards are paired with a set of game rules, allowing you to learn in a group setting while having fun. Whether you're a beginner or looking to sharpen your Kubernetes knowledge, this card game provides an interactive and engaging way to master Kubernetes concepts.  
@@ -13,7 +13,7 @@ The playing cards and rules are offered in different languages.
 
 ## Disclaimer
 This project was created as a hobby and serves as a showcase/example to help me familiarize myself with the latest AI tools and their possibilities. It is not intended to be a comprehensive or exhaustive resource on Kubernetes or card games, and I do not claim completeness.  
-Nevertheless, I strive for accuracy and can assure you that each card has been reviewed at least once by a person with a solid understanding of Kubernetes.  
+Nevertheless, I strive for accuracy and can assure you that each card has been reviewed at least once by a person with a solid understanding of Kubernetes. Sometimes however, due to the limited of space on the card, the description of a resource had to be simplified to its core and main use case. If in doubt, please consult the excellent [Kubernetes documentation](https://kubernetes.io/docs/home/).  
 
 I encourage everyone to extend the rules and cards as they see fit to improve or adapt the project. Pull requests are welcome. Please note that any modifications or contributions should adhere to the project's licensing terms.
 

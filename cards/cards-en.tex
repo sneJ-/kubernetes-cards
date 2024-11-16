@@ -103,7 +103,7 @@
         \cardbackground{img/ai/ing.png}
         \cardtypeNetwork
         \cardtitle{Ingress}
-        \cardcontent{Your Gateway to the Cluster.}{An Ingress is an API object that manages external access to services within a cluster, typically HTTP or HTTPS. It provides a way to route traffic based on rules, such as URL paths, to the appropriate services. Ingress helps you expose multiple services under a single IP address, simplifying external access management.}
+        \cardcontent{Your Gateway to the Cluster.}{An Ingress is a k8s object that manages external access to services within a cluster, typically HTTP or HTTPS. It provides a way to route traffic based on rules, such as URL paths, to the appropriate services. Ingress helps you expose multiple services under a single IP address, simplifying external access management.}
         \cardicon{img/k8s/ing-256.png}
         \cardborder
 %       \carddebug
@@ -284,7 +284,7 @@
 %       \carddebug
         \cardtypeWorkload
         \cardtitle{StatefulSet}
-        \cardcontent{Persistent Identity, Stable Storage.}{A StatefulSet manages the deployment and scaling of Pods with unique identities and stable network storage. It’s used for stateful applications, where each Pod must retain its state across restarts. StatefulSets ensure that Pods are consistently ordered and maintain stable names.}
+        \cardcontent{Persistent Identity, Stable Storage.}{A StatefulSet manages the deployment and scaling of Pods with unique identities, stable network identifiers and persistent storage. It’s used for stateful applications, where each Pod must retain its state across restarts. StatefulSets ensure that Pods are consistently ordered and maintain stable names.}
         \cardicon{img/k8s/sts-256.png}
         \cardborder
     \end{tikzpicture}
@@ -321,7 +321,7 @@
         \cardbackground{img/ai/ep.png}
         \cardtypeNetwork
         \cardtitle{EndpointSlice}
-        \cardcontent{Efficient Service Discovery.}{An EndpointSlice provides a scalable way to track network endpoints, improving the efficiency of service discovery within large clusters. It breaks down the list of endpoints into smaller slices, making it easier to manage and scale services. EndpointSlices enhance the performance of networking in Kubernetes.}
+        \cardcontent{Efficient Service Discovery.}{EndpointSlices group network endpoints (e.g., Pods) for a Kubernetes Service based on its selector, managing them by protocol, port, and Service name. They are automatically created by the control plane and improve scalability and efficiency for networking. Each EndpointSlice has a DNS-compliant name.}
         \cardicon{img/k8s/ep-256.png}
         \cardborder
     \end{tikzpicture}
