@@ -1,0 +1,54 @@
+\documentclass{article}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{stmaryrd}
+\usepackage{marvosym}
+\usepackage{pifont}
+\usepackage{fourier-orns}
+\usepackage{hieroglf}
+\geometry{a4paper, margin=1in}
+
+\title{KubeFlash \\ \large Kubernetes Card Game}
+\author{}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section*{Objective}
+KubeFlash is a card game designed to help players learn and familiarize themselves with basic Kubernetes resources and functions.
+
+\section*{Setup}
+\begin{itemize}
+    \item \textbf{Players:} 2-6
+    \item \textbf{Deck:} 32 Kubernetes resource cards
+    \item \textbf{Categories:} Workload, Network, Role Based Access Control (RBAC), Configuration, Storage, Event, Misc
+    \item \textbf{Markers:} Namespaced {\LARGE$\boxdot$}, Global {\Mundus} or outside {\textpmhg{w}} resources
+\end{itemize}
+
+\section*{Rules}
+At the beginning of the game the playing cards are shuffeled and placed face-down in a draw pile.
+\begin{enumerate}[label=\arabic*.]
+    \item \textbf{Draw and Relay:} The player to the left of the active player (the one who will describe the resource) draws a card \textbf{without showing} it to anyone. They \textbf{only reveal the title} of the card to the player on their right (the active player).
+    
+    \item \textbf{Describe the Resource:} The active player must describe the resource from memory, covering:
+    \begin{itemize}
+        \item \textbf{Category} (Workload, Network, etc.)
+        \item \textbf{Whether it is namespaced, global or outside}
+        \item \textbf{Key function} or \textbf{usage} of the resource
+    \end{itemize}
+    The player does this \textbf{without seeing the card}, relying entirely on their knowledge.
+    
+    \item \textbf{Reveal and Score:} Once the active player has finished their description, the card is revealed to everyone (e.g. placed face-up on the table). The group determines if the active player describe the card correctly with regards to:
+    \begin{itemize}
+        \item \textbf{Category} (Workload, Network, etc.)
+        \item \textbf{Whether it is namespaced, global or outside}
+        \item \textbf{Key function} or \textbf{usage} of the resource
+    \end{itemize}
+	The card is given to the active player, if the active player described the card correctly. Otherwise the card is placed to a discard pile on the table.
+    
+    \item \textbf{Group Discussion:} After scoring, the group briefly discusses the resource to ensure everyone understands it.
+\end{enumerate}
+Once the draw pile is empty, each player counts the amount of cards scored. The players with the highest score win. There can be multiple winners if scores are tied.
+\end{document}
