@@ -1,9 +1,8 @@
 # Kubernetes flash and playing cards
-![Secret Card](extracts/secret.png) ![CVE Card](extracts/cve.png)  
-This project contains a set of 32 Kubernetes-themed flash/playing cards designed to help you familiarize yourself with the basic Kubernetes resources and their usage.  
-Each card features a key Kubernetes resource, such as Pods, Deployments, Services, and ConfigMaps, along with useful information to reinforce your understanding.  
-The cards are paired with a set of game rules, allowing you to learn in a group setting while having fun.  
-Whether you're a beginner or looking to sharpen your Kubernetes knowledge, this card game provides an interactive and engaging way to master Kubernetes concepts.  
+| ![Secret Card](extracts/secret.png) | ![Namespace Card](extracts/ns.png) | ![CVE Card](extracts/cve.png) |
+|-----------------------|-----------------------|-----------------------|
+This project contains a set of 32 Kubernetes-themed flash/playing cards designed to help you familiarize yourself with the basic Kubernetes resources and their usage. Each card features a key Kubernetes resource, such as Pods, Deployments, Services, and ConfigMaps, along with useful information to reinforce your understanding.  
+The cards are paired with a set of game rules, allowing you to learn in a group setting while having fun. Whether you're a beginner or looking to sharpen your Kubernetes knowledge, this card game provides an interactive and engaging way to master Kubernetes concepts.  
 
 The playing cards and rules are offered in different languages.  
 | Language | Cards PDF       | Rules PDF       |
